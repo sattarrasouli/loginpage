@@ -1,13 +1,60 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "IranSans";
+  src: url("./Assets/Fonts/IRANSansMobile-Medium.eot") format("embedded-opentype"), url("./Assets/Fonts/IRANSansMobile-Medium.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
 }
 
+body {
+  margin: 0;
+  font-family: "IranSans";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #b4c6a6;
+  display: grid;
+  grid-template-columns: 1fr minmax(200px, 400px) 1fr;
+  grid-template-rows: 1fr minmax(auto, 1fr) 1fr;
+  grid-gap: 10px;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: Gradient 15s ease infinite;
+  box-sizing: border-box;
+}
+html {
+  font-family: "IranSans";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+div,
+span,
+b,
+p {
+  font-family: "IranSans", "Droid Arabic Kufi", "Droid Sans", sans-serif;
+}
+
+input {
+  text-align: right;
+  direction: rtl;
+}
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
